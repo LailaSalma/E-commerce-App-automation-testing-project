@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: org.example.Runner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 203.669 s <<< FAILURE! - in org.example.Runner.TestRunner
+org.example.Runner.TestRunner.runScenario  Time elapsed: 9.447 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	The resulted product no. 1 does not contain the searched keyword: book expected [true] but found [false],
+	The resulted product no. 5 does not contain the searched keyword: book expected [true] but found [false]
+
+org.example.Runner.TestRunner.runScenario  Time elapsed: 8.456 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	The redirection URL is incorrect expected [true] but found [false]
+
+org.example.Runner.TestRunner.runScenario  Time elapsed: 8.418 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	The redirection URL is incorrect expected [true] but found [false]
+
+org.example.Runner.TestRunner.runScenario  Time elapsed: 10.262 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	The URL the user was directed to is incorrect expected [true] but found [false]
+

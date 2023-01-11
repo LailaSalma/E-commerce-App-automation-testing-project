@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="4" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="201.763">
+<testcase classname="[Register] user could register with valid data" name="user can register using valid data" time="14.535">
+<system-out><![CDATA[Given user goes to registration page........................................passed
+When user select gender type................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth day "23" month "March" year "1997".............passed
+And user enters email.......................................................passed
+And user fills Password fields "P@ssw0rd" "P@ssw0rd"........................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="[Login] user could log into their account" name="user can login with valid email and password" time="9.171">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user logs in with the data "lassunslaila@example.com" and "P@ssw0rd"...passed
+And user press on login button..............................................passed
+Then user login to the system successfully..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="[Login] user could log into their account" name="user could login with invalid email and password" time="9.679">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user logs in with the data "wrong@example.com" and "P@ssw0rd"..........passed
+And user press on login button..............................................passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="[Currencies] user could choose the currency" name="user can change the currency" time="8.156">
+<system-out><![CDATA[Given user selects Euro currency from the dropdown list on the top left of home page.passed
+Then the currency of products is changed....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="[Search] user could search for products using name and sku" name="user could search using product name" time="9.425">
+<failure message="The following asserts failed:&#10;&#9;The resulted product no. 1 does not contain the searched keyword: book expected [true] but found [false],&#10;&#9;The resulted product no. 5 does not contain the searched keyword: book expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given user types the product "book" in the search bar.......................passed
+When user press on search button............................................passed
+Then the relevant results of "book" are displayed...........................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	The resulted product no. 1 does not contain the searched keyword: book expected [true] but found [false],
+	The resulted product no. 5 does not contain the searched keyword: book expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D04_searchSteps.searchSuccessful(D04_searchSteps.java:38)
+	at ✽.the relevant results of "book" are displayed(file:///D:/FET/EcommerceAutomation/src/main/resources/Features/F04_search.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="[Search] user could search for products using name and sku" name="user could search using product name 2" time="8.902">
+<system-out><![CDATA[Given user types the product "laptop" in the search bar.....................passed
+When user press on search button............................................passed
+Then the relevant results of "laptop" are displayed.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="[Search] user could search for products using name and sku" name="user could search using product name 3" time="8.047">
+<system-out><![CDATA[Given user types the product "nike" in the search bar.......................passed
+When user press on search button............................................passed
+Then the relevant results of "nike" are displayed...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="[Search] user could search for products using name and sku" name="user could search using product sku" time="10.135">
+<system-out><![CDATA[Given user types the product "SCI_FAITH" in the search bar..................passed
+When user press on search button............................................passed
+And user clicks on the product displayed in the results.....................passed
+Then the relevant result of "SCI_FAITH" are displayed.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="[Search] user could search for products using name and sku" name="user could search using product sku 2" time="8.843">
+<system-out><![CDATA[Given user types the product "APPLE_CAM" in the search bar..................passed
+When user press on search button............................................passed
+And user clicks on the product displayed in the results.....................passed
+Then the relevant result of "APPLE_CAM" are displayed.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="[Search] user could search for products using name and sku" name="user could search using product sku 3" time="8.899">
+<system-out><![CDATA[Given user types the product "SF_PRO_11" in the search bar..................passed
+When user press on search button............................................passed
+And user clicks on the product displayed in the results.....................passed
+Then the relevant result of "SF_PRO_11" are displayed.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="[Hover Categories] user could use the hovering functionality on the main categories" name="user hovers on a random category and chooses as subcategory" time="10.463">
+<system-out><![CDATA[Given user hovers on a random main category.................................passed
+When user hovers on one of the displayed subcategories and clicks on it.....passed
+Then user is redirected to the chosen subcategory...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="[Home sliders] user would be redirected to the corresponding product upon clicking on the slider" name="first slider is clickable on home page" time="8.448">
+<failure message="The following asserts failed:&#10;&#9;The redirection URL is incorrect expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given user clicks on slider no. "1" button..................................passed
+When user clicks on the product shown in the slider.........................passed
+Then user is redirected to the page of the first product....................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	The redirection URL is incorrect expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D06_homeSliderSteps.firstSliderRedirection(D06_homeSliderSteps.java:37)
+	at ✽.user is redirected to the page of the first product(file:///D:/FET/EcommerceAutomation/src/main/resources/Features/F06_homeSlider.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="[Home sliders] user would be redirected to the corresponding product upon clicking on the slider" name="Second slider is clickable on home page" time="8.41">
+<failure message="The following asserts failed:&#10;&#9;The redirection URL is incorrect expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given user clicks on slider no. "2" button..................................passed
+When user clicks on the product shown in the slider.........................passed
+Then user is redirected to the page of the second product...................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	The redirection URL is incorrect expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D06_homeSliderSteps.secondSliderRedirection(D06_homeSliderSteps.java:47)
+	at ✽.user is redirected to the page of the second product(file:///D:/FET/EcommerceAutomation/src/main/resources/Features/F06_homeSlider.feature:13)
+]]></failure>
+</testcase>
+<testcase classname="[Follow Us] users could open followUs links" name="user opens facebook link" time="15.207">
+<system-out><![CDATA[Given user opens facebook link..............................................passed
+Then "https://web.facebook.com/nopCommerce?_rdc=1&_rdr" is opened in new tab.passed
+]]></system-out>
+</testcase>
+<testcase classname="[Follow Us] users could open followUs links" name="user opens twitter link" time="15.795">
+<system-out><![CDATA[Given user opens twitter link...............................................passed
+Then "https://twitter.com/nopCommerce" is opened in new tab.................passed
+]]></system-out>
+</testcase>
+<testcase classname="[Follow Us] users could open followUs links" name="user opens rss link" time="10.256">
+<failure message="The following asserts failed:&#10;&#9;The URL the user was directed to is incorrect expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given user opens rss link...................................................passed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab.failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	The URL the user was directed to is incorrect expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D07_followUsSteps.redirect(D07_followUsSteps.java:56)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab(file:///D:/FET/EcommerceAutomation/src/main/resources/Features/F07_followUs.feature:14)
+]]></failure>
+</testcase>
+<testcase classname="[Follow Us] users could open followUs links" name="user opens Youtube link" time="15.968">
+<system-out><![CDATA[Given user opens youtube link...............................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened in new tab........passed
+]]></system-out>
+</testcase>
+<testcase classname="[Wishlist] user could add product to their wishlist" name="user could add a product to wishlist by pressing the heart icon" time="8.646">
+<system-out><![CDATA[Given user click on heart icon below the product image......................passed
+Then user is able to see a successful message...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="[Wishlist] user could add product to their wishlist" name="a product is added to wishlist upon clicking on the heart icon" time="12.319">
+<system-out><![CDATA[Given user click on heart icon below the product image......................passed
+And user clicks on wishlist button after the success message disappears.....passed
+Then user could see item added successfully in wishlist.....................passed
+]]></system-out>
+</testcase>
+</testsuite>

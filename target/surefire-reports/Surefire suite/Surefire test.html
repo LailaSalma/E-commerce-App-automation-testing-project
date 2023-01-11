@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>15/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jan 11 20:54:41 EET 2023</td>
+</tr>
+<tr><td>Total time:</td><td>202 seconds (202459 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product name", "[Search] user could search for products using name and sku"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	The resulted product no. 1 does not contain the searched keyword: book expected [true] but found [false],
+	The resulted product no. 5 does not contain the searched keyword: book expected [true] but found [false]
+	at org.example.stepDefinitions.D04_searchSteps.searchSuccessful(D04_searchSteps.java:38)
+	at ?.the relevant results of &quot;book&quot; are displayed(file:///D:/FET/EcommerceAutomation/src/main/resources/Features/F04_search.feature:8)
+... Removed 2 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace694580932", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace694580932'><pre>java.lang.AssertionError: The following asserts failed:
+	The resulted product no. 1 does not contain the searched keyword: book expected [true] but found [false],
+	The resulted product no. 5 does not contain the searched keyword: book expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D04_searchSteps.searchSuccessful(D04_searchSteps.java:38)
+	at ?.the relevant results of &quot;book&quot; are displayed(file:///D:/FET/EcommerceAutomation/src/main/resources/Features/F04_search.feature:8)
+</pre></div></td>
+<td>9</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Second slider is clickable on home page", "[Home sliders] user would be redirected to the corresponding product upon clicking on the slider"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	The redirection URL is incorrect expected [true] but found [false]
+	at org.example.stepDefinitions.D06_homeSliderSteps.secondSliderRedirection(D06_homeSliderSteps.java:47)
+	at ?.user is redirected to the page of the second product(file:///D:/FET/EcommerceAutomation/src/main/resources/Features/F06_homeSlider.feature:13)
+... Removed 2 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1421622223", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1421622223'><pre>java.lang.AssertionError: The following asserts failed:
+	The redirection URL is incorrect expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D06_homeSliderSteps.secondSliderRedirection(D06_homeSliderSteps.java:47)
+	at ?.user is redirected to the page of the second product(file:///D:/FET/EcommerceAutomation/src/main/resources/Features/F06_homeSlider.feature:13)
+</pre></div></td>
+<td>8</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "first slider is clickable on home page", "[Home sliders] user would be redirected to the corresponding product upon clicking on the slider"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	The redirection URL is incorrect expected [true] but found [false]
+	at org.example.stepDefinitions.D06_homeSliderSteps.firstSliderRedirection(D06_homeSliderSteps.java:37)
+	at ?.user is redirected to the page of the first product(file:///D:/FET/EcommerceAutomation/src/main/resources/Features/F06_homeSlider.feature:8)
+... Removed 2 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1797821749", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1797821749'><pre>java.lang.AssertionError: The following asserts failed:
+	The redirection URL is incorrect expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D06_homeSliderSteps.firstSliderRedirection(D06_homeSliderSteps.java:37)
+	at ?.user is redirected to the page of the first product(file:///D:/FET/EcommerceAutomation/src/main/resources/Features/F06_homeSlider.feature:8)
+</pre></div></td>
+<td>8</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens rss link", "[Follow Us] users could open followUs links"</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	The URL the user was directed to is incorrect expected [true] but found [false]
+	at org.example.stepDefinitions.D07_followUsSteps.redirect(D07_followUsSteps.java:56)
+	at ?.&quot;https://demo.nopcommerce.com/new-online-store-is-open&quot; is opened in new tab(file:///D:/FET/EcommerceAutomation/src/main/resources/Features/F07_followUs.feature:14)
+... Removed 2 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1461091531", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1461091531'><pre>java.lang.AssertionError: The following asserts failed:
+	The URL the user was directed to is incorrect expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D07_followUsSteps.redirect(D07_followUsSteps.java:56)
+	at ?.&quot;https://demo.nopcommerce.com/new-online-store-is-open&quot; is opened in new tab(file:///D:/FET/EcommerceAutomation/src/main/resources/Features/F07_followUs.feature:14)
+</pre></div></td>
+<td>10</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens twitter link", "[Follow Us] users could open followUs links"</td>
+<td></td>
+<td>15</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can register using valid data", "[Register] user could register with valid data"</td>
+<td></td>
+<td>14</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "a product is added to wishlist upon clicking on the heart icon", "[Wishlist] user could add product to their wishlist"</td>
+<td></td>
+<td>12</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens Youtube link", "[Follow Us] users could open followUs links"</td>
+<td></td>
+<td>15</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could add a product to wishlist by pressing the heart icon", "[Wishlist] user could add product to their wishlist"</td>
+<td></td>
+<td>8</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could login with invalid email and password", "[Login] user could log into their account"</td>
+<td></td>
+<td>9</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can change the currency", "[Currencies] user could choose the currency"</td>
+<td></td>
+<td>8</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user hovers on a random category and chooses as subcategory", "[Hover Categories] user could use the hovering functionality on the main categories"</td>
+<td></td>
+<td>10</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens facebook link", "[Follow Us] users could open followUs links"</td>
+<td></td>
+<td>15</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product name", "[Search] user could search for products using name and sku"</td>
+<td></td>
+<td>8</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product name", "[Search] user could search for products using name and sku"</td>
+<td></td>
+<td>8</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product sku", "[Search] user could search for products using name and sku"</td>
+<td></td>
+<td>10</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product sku", "[Search] user could search for products using name and sku"</td>
+<td></td>
+<td>8</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can login with valid email and password", "[Login] user could log into their account"</td>
+<td></td>
+<td>9</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+<tr>
+<td title='org.example.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product sku", "[Search] user could search for products using name and sku"</td>
+<td></td>
+<td>8</td>
+<td>org.example.Runner.TestRunner@2c039ac6</td></tr>
+</table><p>
+</body>
+</html>
